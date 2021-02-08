@@ -1,0 +1,96 @@
+/* fonts */
+
+@font-face {
+    src: url(fonts/NeueHaasGroteskRegular.ttf);
+    font-family: NeueHass;
+}
+
+@font-face {
+    src: url(fonts/NeueHaasGroteskBold.ttf);
+    font-family: NeueHassBold;
+
+}
+
+@font-face {
+    src: url(fonts/NeueHaasGroteskMedium.ttf);
+    font-family: NeueHassMedium;
+
+}
+
+@font-face {
+    src: url(fonts/akkurat-mono.ttf);
+    font-family: Akkurat;
+
+}
+.cont {
+    font-size: 25px;
+    padding-left: 10%;
+    font-family: akkurat;
+    font-weight: lighter;
+    padding-right: 20px;
+    max-width: 70%;
+}
+.heading1 {
+    font-size: 100px;
+    padding-left: 5%;
+    font-family: NeueHassMedium;
+    max-width: 50%;
+
+}
+
+.heading2 {
+    font-size: 50px;
+    padding-left: 5%;
+    font-family: NeueHassMedium;
+
+}
+
+.heading3 {
+    font-size: 40px;
+    padding-left: 5%;
+    font-family: NeueHass;
+
+}
+
+body {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.blackrounded {
+    background-color: #000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:6px;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    font-family: NeueHassMedium;
+    padding-right: 40px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+}
+
+/* input[type="file"] {
+    display: none;
+} */
+
+.abstractbackground {
+    /* background-image: url("images/webwallpaper.png"); */
+    /* background-size: 2160px 1440px; */
+    padding: 0;
+    margin: 0;
+}
+
+
+
+::selection {
+    background:#FEB729 /* WebKit/Blink Browsers */
+  }
+::-moz-selection {
+    background:#FEB729; /* Gecko Browsers */
+  }

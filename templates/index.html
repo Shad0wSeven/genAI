@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>GenAI</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+        <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    </head>
+    <body>
+    <div class="abstractbackground">
+        <h1 class="heading1">Decode Your Genetic Data.</h1>
+        <p class="heading3" style="padding-left:10%">
+            60% Of the Population affected by a Genetic Disorder. <br>
+            Over 30 Million Genetic Tests Tests Taken to Date. <br>
+            Over 60 Million Potentially Harmful Genes. <br>
+        </p>
+
+        <h2 class="heading2">Why?</h2>
+        <p class="heading3" style="padding-left:10%; max-width: 70%;">
+            Over 30 Million people have taken a genetic test so far. Genetic tests reveal <span style="font-family: NeueHassMedium;">mutations</span> whithin a person, and while these can be used for basic 
+            profiling, such as gender, skin color, and other features, these genes can also be used to highlight mutations which could <span style="font-family: NeueHassMedium;">potentialy cause
+                diseases</span>  such as <span style="font-family: NeueHassMedium;">cancer, sickle cell, adhd, and more.</span> 
+        </p>
+    </div>
+        <div style="background-color: black; padding-bottom: 10%;">
+
+        <!-- HOW IT WORKS -->
+        
+        <h2 class="heading1" style="padding-top: 10%; color: white;">How it Works.</h2>
+        <h2 class="heading2" style="color: white;">Databases.</h2>
+        <p class="cont" style="color: white;">
+            Hundreds of Databases exist with Phenotype-Genotype associations for various diseases. Using a novel fuzzy search algorithm, is able to levrage all of them to search for variations in your DNA that could signal certain diseases.        </p>
+
+        <h2 class="heading2" style="color: white;">Models.</h2>
+        <p class="cont" style="color: white;">
+            DYGD also includes alot of ML models created by researchers and the team that can signal that you have additional diseases, that may not be studied enough to have comprehensive G-P associations listed, altogether giving you more information about yourself. These models aren't avaliable anywhere else.
+        </p>
+
+        <h2 class="heading2" style="color: white;">Summary.</h2>
+        <p class="cont" style="color: white;">
+            At the end of all checks, a summary is returned to you, with all detected anomalies.
+        </p>
+
+        </div>
+
+        <!-- WHY US -->
+
+        <h2 class="heading1" style="padding-top: 5%;"> Why Us?</h2>
+        <h2 class="heading2">Private.</h2>
+        <p class="cont">
+            DNA Can trace you. It is you. Protect it. This tool is Open Source and avaliable here. We do this so you KNOW your data is safe
+        </p>
+
+        <h2 class="heading2">Accurate.</h2>
+        <p class="cont">
+            DYGD is Very accurate, harnessing all of dGAP and every genotype-phenotype database avaliable, as well as novel machine learning libraries.
+        </p>
+
+        <h2 class="heading2">Free. No Strings Attached.</h2>
+        <p class="cont">
+            DYGD is open source and free. If you don't trust us, just go ahead and download the source code, and compile from scratch.
+        </p>
+
+        <h2 class="heading1" style="padding-top: 20%;">Get Started.</h2>
+        <h2 class="heading2" style="padding-top: 10%;">Step 1. Get The Right Files</h2>
+
+        <p class="heading3" style="padding-left:10%; max-width: 70%;">
+            Make sure you have FASTA files, in the .fa Format. These are the most common genetic file format, so make sure to check twice! You will need 22 of them, for all 22 Chromosomes
+        </p>
+
+
+        <img src="static/images/fastaFormat.png">
+
+        <h2 class="heading2" style="padding-top: 10%;">Step 2. Name your Files Correctly</h2>
+
+        <p class="heading3" style="padding-left:10%; max-width: 70%;">
+            Our service has no way of knowing which file is which, as all of them are roughly similar! Make sure you get all of them named "CHR-1" for chromosome 1 (without the quotations), "CHR-2" for chromosome two, and so on and so forth. We would advise you make a new folder and copy them to this folder.
+        </p>
+
+        <img src="static/images/fastas.png">
+
+        <h2 class="heading2" style="padding-top: 10%;">Step 3. Browse for your Files</h2>
+
+        <p class="heading3" style="padding-left:10%; max-width: 70%;">
+            Click the "Browse..." Button, and navigate to the folder where your scans are, and select all of them.
+        </p>
+
+        <img src="static/images/selectCorrect.png">
+    
+
+        <h2 class="heading2" style="padding-top: 10%;">Step 4. Wait...</h2>
+
+        <p class="heading3" style="padding-left:10%; max-width: 70%;">
+            Click Upload, and wait, Depending on internet speeds the test could take anywhere from 2 - 10 minutes.
+        </p>
+
+
+        <form action="upload" method="post" enctype="multipart/form-data" class="cont">
+            <input type="file" multiple="true" name="file[]" class="span3 blackrounded" /><br /><br />
+            <input type="submit" value="Upload"  class="span2 blackrounded">
+          </form>
+        
+          <h2 class="heading2" >Feedback</h2>
+          <p align="center"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSegYVqIhhbqVb0e_Aeal8GpkjJDaeylFueFGJvCWCIMjjyZGA/viewform?embedded=true" width="640" height="705" frameborder="0" marginheight="0" marginwidth="0" style="display:block;">Loading…</iframe></p>
+          
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+

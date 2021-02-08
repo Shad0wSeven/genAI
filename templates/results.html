@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Results</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+    </head>
+    <body>
+        <h1 class="heading1">Results.</h1>
+
+
+        <h2 class="heading2" style="padding-left: 10%;">{{ totalVar }} Benign Variations</h2>
+        <h2 class="heading2" style="padding-left: 10%;">{{ unmatched }} Potentially Harmful Variations</h2>
+       
+
+        <!-- HOW IT WORKS --> 
+        
+        <h2 class="heading2" style="padding-top: 10%;">Summary (Beta)</h2>
+        <h2 class="heading3" style="padding-left: 10%;">{% for file in diseases %}
+            <li> - {{file}}</li>
+            {% endfor %}</h2>
+
+        <div style="background-color: black; padding-bottom: 10%;">
+            <h1 class="heading1" style="padding-top: 20%; color: white;">Understanding Your Results.</h1>
+            <h2 class="heading2" style="padding-top: 10%; color: white;">Summary</h2>
+            <p class="heading3" style="padding-left:10%; max-width: 70%; color: white;">
+                The Summary shows what variations you have that MIGHT show the prevalence of a disease. If this is blank, this just means we detected no mutations that signal a certain disease, it does NOT mean you were completly fine, nor does it mean that you have the disease.
+            </p>
+    
+            <h2 class="heading2" style="padding-top: 10%; color: white;" >Raw</h2>
+            <p class="heading3" style="padding-left:10%; max-width: 70%; color: white;">
+                This is just where you can see all the raw variations you had, this is where you can see what issues you may have, although they are in a raw format, so just check the disease itself.
+            </p>
+        </div>
+
+        <!-- Potentially Harmful --> 
+        
+        
+
+        <h2 class="heading1" style="padding-top: 10%;">Raw Variations</h2>
+        <a href="#jumpPosition" class="cont">Jump to the files you Uploaded.</a>
+        <h2 class="heading2">Potentially Harmful</h2>
+        <p class="cont">                {% for file in incorrect %}
+            <li class="cont"> {{file}} <br><br></li>
+            {% endfor %}</p>
+
+
+
+
+        <!-- UPLOADED FILES -->            
+        <h2 class="heading2" style="padding-top: 5%;" id="jumpPosition">Uploaded Files</h2>
+            <div class="cont" style="max-width: 100%;">
+            This is a list of the files you just uploaded, click on them to download them
+            <ul style="list-style: none;" class="cont">
+                {% for file in filenames %}
+                <li class= > - <a href="{{url_for('uploaded_file', filename=file)}}">{{file}}</a></li>
+                {% endfor %}
+            </ul>
+            </div>
+
+
+
+
+    </body>
+</html>
