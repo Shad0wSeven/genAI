@@ -6,4 +6,10 @@
 
 </div>
 
-## Figure out genetic anomalies easily and quickly from DNA sets.
+### Figure out genetic anomalies easily and quickly from DNA sets.
+
+- Quickly submit and accept data from different people freely and easily
+- Accepts Fastas
+- <10 Minute Computation time
+- Accurate
+- Built with Flask lightweight and fast
