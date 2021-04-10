@@ -15,3 +15,5 @@
 - Built with Flask lightweight and fast
 
 **Note:** Website was taken down
+
+**Note:** Archiving for now due to not needing to work on this anymore.
